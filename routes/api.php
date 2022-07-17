@@ -24,3 +24,4 @@ Route::get('/admin/posts', 'App\Http\Controllers\Admin\PostIndexController@__inv
 Route::post('/admin/posts', 'App\Http\Controllers\Admin\PostStoreController@__invoke');
 Route::get('/admin/posts/{post:uuid}/edit', 'App\Http\Controllers\Admin\PostEditController@__invoke');
 Route::patch('/admin/posts/{post:uuid}', 'App\Http\Controllers\Admin\PostPatchController@__invoke');
+Route::delete('/admin/posts/{post:uuid}', 'App\Http\Controllers\Admin\PostDeleteController@__invoke');
