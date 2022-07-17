@@ -22,5 +22,5 @@ Route::get('/posts', 'App\Http\Controllers\PostIndexController@__invoke');
 Route::get('/posts/{post:slug}', 'App\Http\Controllers\PostShowController@__invoke');
 Route::get('/admin/posts', 'App\Http\Controllers\Admin\PostIndexController@__invoke');
 Route::post('/admin/posts', 'App\Http\Controllers\Admin\PostStoreController@__invoke');
-Route::get('/admin/posts/{post:slug}/edit', 'App\Http\Controllers\Admin\PostEditController@__invoke');
+Route::get('/admin/posts/{post:uuid}/edit', 'App\Http\Controllers\Admin\PostEditController@__invoke');
 Route::patch('/admin/posts/{post:uuid}', 'App\Http\Controllers\Admin\PostPatchController@__invoke');
