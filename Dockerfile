@@ -1,8 +1,8 @@
 FROM php:8.2-rc-zts-alpine3.16
 
-RUN apk update && apk upgrade && apk add --no-cache --update curl bash openssl zip unzip git php-pgsql postgresql-dev
+RUN apk update && apk upgrade && apk add --no-cache --update curl bash openssl zip unzip git postgresql-dev
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-RUN docker-php-ext-install pgsql pdo pdo_pgsql
+RUN docker-php-ext-install pdo pdo_pgsql
 WORKDIR /app
 COPY . /app
 RUN composer update --ignore-platform-reqs
