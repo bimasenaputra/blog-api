@@ -17,3 +17,5 @@ jobs:
           heroku_app_name: "fontstream-api"
           heroku_email: "bimasenaputra@gmail.com"
           usedocker: true
+          docker_build_args: |
+            PORT
