@@ -17,5 +17,4 @@ jobs:
           heroku_app_name: "fontstream-api"
           heroku_email: "bimasenaputra@gmail.com"
           usedocker: true
-          docker_build_args: |
-            PORT
+          docker_heroku_process_type: worker
