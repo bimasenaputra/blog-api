@@ -19,4 +19,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "fontstream-api"
           heroku_email: "bimasenaputra@gmail.com"
+          env_file: ".env"
           usedocker: true
