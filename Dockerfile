@@ -15,4 +15,4 @@ RUN chmod -R 775 storage
 RUN chmod -R 775 bootstrap/cache
 USER myuser
 
-CMD ["php", "artisan", "serve", "--host=0.0.0.0"]
+CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=$PORT"]
