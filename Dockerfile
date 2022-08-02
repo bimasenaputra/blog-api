@@ -13,4 +13,4 @@ RUN chown -R $user:www-data storage && chown -R $user:www-data vendor && chown -
 RUN chmod -R 775 storage && chmod -R 755 vendor && chmod -R 775 bootstrap/cache
 USER myuser
 
-CMD ["./start.sh"]
+CMD php artisan serve --host=0.0.0.0 --port=$PORT
