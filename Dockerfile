@@ -10,8 +10,10 @@ RUN composer update --ignore-platform-reqs
 ARG user=myuser
 RUN adduser -D $user
 RUN chown -R $user:www-data storage
+RUN chown -R $user:www-data vendor
 RUN chown -R $user:www-data bootstrap/cache
 RUN chmod -R 775 storage
+RUN chmod -R 755 vendor
 RUN chmod -R 775 bootstrap/cache
 USER myuser
 
