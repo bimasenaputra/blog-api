@@ -9,12 +9,10 @@ RUN composer update --ignore-platform-reqs
 
 ARG user=myuser
 RUN adduser -D $user
-RUN chown -R $user:www-data storage
-RUN chown -R $user:www-data vendor
-RUN chown -R $user:www-data bootstrap/cache
-RUN chmod -R 775 storage
-RUN chmod -R 755 vendor
-RUN chmod -R 775 bootstrap/cache
+RUN chown -R $user:www-data storage && chown -R $user:www-data vendor && chown -R $user:www-data bootstrap/cache
+RUN chmod -R 775 storage && chmod -R 755 vendor && chmod -R 775 bootstrap/cache
 USER myuser
+
+RUN php artisan config:clear && php artisan route:clear && php artisan view:clear && php artisan cache:clear
 
 CMD php artisan serve --host=0.0.0.0 --port=$PORT
