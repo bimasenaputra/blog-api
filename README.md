@@ -1,4 +1,7 @@
 # Blog
+
+![Blog Editor Page](https://drive.google.com/uc?export=view&id=1xGgb-AVMfKwo-SIaGe04w6kEux0RJCvq)
+
 Blog web app, allowing users to post a blog with text, image and styled text, using Laravel backend and Vue frontend.
 
 ## 🐾 Link
